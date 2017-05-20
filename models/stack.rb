@@ -8,7 +8,7 @@ class Stack
   end
 
   def depth
-    2
+    items.size
   end 
 
   def push(item)
