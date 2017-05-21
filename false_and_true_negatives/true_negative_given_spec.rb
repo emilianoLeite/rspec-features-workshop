@@ -1,7 +1,7 @@
 require 'rspec/given'
-require_relative '../queries/user_query'
+require_relative '../queries/admin_user_query'
 
-describe UserQuery do
+describe AdminUserQuery do
   Given(:not_admin_user) { FactoryGirl.build :user, type: 'not_admin' }
   Given(:admin_user) { FactoryGirl.build :user }
   Given(:supervisor_user) { FactoryGirl.build :user, type: 'supervisor_user' }
