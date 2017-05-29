@@ -10,8 +10,8 @@ describe AdminUserQuery do
   describe "#all" do
     it 'returns only admin users' do
       result = subject.all
-      result.each do |admin| 
-        expect(admin.type).to eq 'admin'
+      result.each do |user|
+        expect(user.type).to eq 'admin'
       end
     end
   end
