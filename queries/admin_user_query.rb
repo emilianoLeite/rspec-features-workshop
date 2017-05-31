@@ -1,9 +1,9 @@
 class AdminUserQuery
   def initialize(users)
     @users = users
-  end 
+  end
 
   def all
-    @users.select { |u| u.type == 'admin' }
+    @users.select { |u| u.admin? }
   end
 end
