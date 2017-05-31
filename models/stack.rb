@@ -1,6 +1,6 @@
 class Stack
   class UnderflowError < StandardError; end
-  
+
   attr_accessor :items
 
   def initialize(items)
@@ -9,11 +9,11 @@ class Stack
 
   def depth
     items.size
-  end 
+  end
 
   def push(item)
     items << item
-  end 
+  end
 
   def top
     items.last
@@ -22,4 +22,4 @@ class Stack
   def pop
     raise UnderflowError.new('empty')
   end
-end     
+end

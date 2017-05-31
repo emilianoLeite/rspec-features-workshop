@@ -15,6 +15,28 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'support/factory_girl'
 require 'byebug'
+require 'active_support/concern'
+
+module DescribedMethod
+  extend ActiveSupport::Concern
+
+  included do
+    def described_method
+      subject.send(method_from_description(self.class))
+    end
+
+    def method_from_description(klass)
+      if klass == RSpec::Core::ExampleGroup
+        raise StandardError.new('No instance method described in current spec.')
+      elsif klass.description[0] == '#'
+        klass.description.strip[1..-1]
+      else
+        method_from_description(klass.superclass)
+      end
+    end
+  end
+end
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
@@ -46,7 +68,7 @@ RSpec.configure do |config|
   # triggering implicit auto-inclusion in groups with matching metadata.
   config.shared_context_metadata_behavior = :apply_to_host_groups
   config.example_status_persistence_file_path = '../tmp/last_rspec_run.md'
-
+  config.include DescribedMethod, described_method: true
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 =begin

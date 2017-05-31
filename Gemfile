@@ -6,4 +6,5 @@ group :test do
   # gem 'rspec-given'
   gem 'fuubar'
   gem 'factory_girl'
+  gem 'activesupport'
 end
