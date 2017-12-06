@@ -14,6 +14,8 @@ GEM
     fuubar (2.2.0)
       rspec-core (~> 3.0)
       ruby-progressbar (~> 1.4)
+    given_core (3.8.0)
+      sorcerer (>= 0.3.7)
     i18n (0.8.1)
     minitest (5.10.2)
     rspec (3.6.0)
@@ -25,11 +27,15 @@ GEM
     rspec-expectations (3.6.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.6.0)
+    rspec-given (3.8.0)
+      given_core (= 3.8.0)
+      rspec (>= 2.14.0)
     rspec-mocks (3.6.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.6.0)
     rspec-support (3.6.0)
     ruby-progressbar (1.8.1)
+    sorcerer (1.0.2)
     thread_safe (0.3.6)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
@@ -43,6 +49,7 @@ DEPENDENCIES
   factory_girl
   fuubar
   rspec
+  rspec-given
 
 BUNDLED WITH
-   1.15.0
+   1.16.0
