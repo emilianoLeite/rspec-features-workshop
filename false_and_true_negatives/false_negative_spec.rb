@@ -2,7 +2,7 @@ require_relative '../queries/admin_user_query'
 
 describe AdminUserQuery do
   let(:not_admin_user) { FactoryGirl.build :user, type: 'normal' }
-  let(:manager_user) { FactoryGirl.build :user, type: 'manager'}
+  let(:manager_user) { FactoryGirl.build :user, type: 'manager' }
   let(:supervisor_user) { FactoryGirl.build :user, type: 'supervisor' }
   let(:users) { [not_admin_user, manager_user, supervisor_user] }
 
