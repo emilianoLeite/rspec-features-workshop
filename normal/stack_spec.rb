@@ -5,6 +5,7 @@ describe Stack do
 
   context "with no items" do
     let(:initial_contents) { [] }
+
     it 'should be empty' do
       expect(stack.depth).to eq 0
     end
@@ -23,12 +24,10 @@ describe Stack do
 
     context "when popping" do
       let(:result) { stack.pop }
+
       it 'raises an UnderflowError' do
         expect { result }.to raise_error Stack::UnderflowError, /empty/
       end
     end
-  end
-
-  context "with 1 item" do
   end
 end
