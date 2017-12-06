@@ -28,4 +28,7 @@ describe Stack do
       end
     end
   end
+
+  context "with 1 item" do
+  end
 end
