@@ -1,0 +1,58 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/emiliano/projects/rails-treinamento/rails_treinamento/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/emiliano/projects/rails-treinamento/rails_treinamento/app/controllers/home_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/emiliano/projects/rails-treinamento/rails_treinamento/app/controllers/base_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/emiliano/projects/rails-treinamento/rails_treinamento/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/emiliano/projects/rails-treinamento/rails_treinamento/app/controllers/admin/base_controller.rb": [
+        0,
+        0
+      ],
+      "/Users/emiliano/projects/rails-treinamento/rails_treinamento/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/emiliano/projects/rails-treinamento/rails_treinamento/app/mailers/sample_mailer.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/emiliano/projects/rails-treinamento/rails_treinamento/app/models/application_record.rb": [
+        0,
+        0,
+        0
+      ],
+      "/Users/emiliano/projects/rails-treinamento/rails_treinamento/app/workers/sample_worker.rb": [
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1512661188
+  }
+}
