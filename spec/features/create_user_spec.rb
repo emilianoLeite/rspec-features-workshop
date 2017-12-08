@@ -3,12 +3,14 @@ require 'rails_helper'
 describe 'As a user', js: true, type: :feature do
 
   it 'I can create other users' do
+    # List page
     visit '/users'
 
     sleep 1
 
     click_link 'New User'
     sleep 1
+    # New page
     expect(page.current_path).to eq(new_user_path)
 
     fill_in 'Name', with: 'User 1'

@@ -3,17 +3,19 @@ require 'rails_helper'
 describe 'As a user', js: true, type: :feature do
 
   it 'I can edit users' do
+    # List page
     user = User.create(name: 'User 1', email: 'user@email.com')
     visit '/users'
 
     find(".js-edit-#{user.id}").click
 
+    # Edit page
     expect(page.current_path).to eq(edit_user_path(user))
 
     fill_in 'Name', with: 'User 2'
     click_button 'Update User'
 
-    # Update redirects to list
+    # Update redirects to list page
     expect(page.current_path).to eq(users_path)
 
     # Check flash message
