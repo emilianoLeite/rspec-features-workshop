@@ -9,10 +9,6 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'simplecov'
 SimpleCov.start 'rails'
 
-SimpleCov.at_exit do
-  puts "(#{SimpleCov.result.covered_percent.round(2)}%) covered"
-end
-
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 
