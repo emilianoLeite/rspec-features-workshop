@@ -13,6 +13,6 @@ describe 'Doubles' do
     user = double('User Double')
     checker = AdultChecker.new(user)
 
-    expect(checker.adult?).to be_truthy
+    expect(checker.adult?).to eq true
   end
 end
