@@ -1,18 +1,25 @@
-require_relative '../models/stack'
+class PingPong
+  def ping
+    'ping'
+  end
+
+  def pong
+    'pong'
+  end
+end
 
 describe 'Stubs' do
-  subject(:stack) { Stack.new(['last_item']) }
+  let(:ping_pong) { PingPong.new }
 
-  describe "Stack#pop" do
-    before { allow(subject).to receive(:poop).and_return 'new_item' }
-    
+  describe "PingPong#pong" do
+    before { allow(ping_pong).to receive(:bong).and_return 'bling' }
+
     it 'stubs the supplied method' do
-      expect(stack.pop).to eq 'new_item'
+      expect(ping_pong.pong).to eq 'bling'
     end
 
     it 'does not stub other methods' do
-      expect(stack.depth).to eq 1
-      expect(stack.top).to eq 'last_item'
+      expect(ping_pong.ping).to eq 'ping'
     end
   end
 end
