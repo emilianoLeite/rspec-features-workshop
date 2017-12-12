@@ -14,14 +14,13 @@ describe 'Doubles' do
     allow(user).to receive(:age).and_return(18)
     checker = AdultChecker.new(user)
 
-
-    expect(checker.adult?).to be_truthy
+    expect(checker.adult?).to eq true
   end
 
   it 'vai funfar' do
     user = double('User Double', :age => 18)
     checker = AdultChecker.new(user)
 
-    expect(checker.adult?).to be_truthy
+    expect(checker.adult?).to eq true
   end
 end

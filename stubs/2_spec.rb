@@ -6,7 +6,7 @@ end
 
 class ProductsController
   def index
-    authenticated = UserAuthenticator.new(current_user).authenticate
+    authenticated = UserAuthenticator.authenticate(current_user)
     if authenticated
       Product.all
     else
@@ -31,5 +31,4 @@ describe ProductsController do
 
     it 'returns no products'
   end
-
 end
