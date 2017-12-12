@@ -17,7 +17,14 @@ GEM
     given_core (3.8.0)
       sorcerer (>= 0.3.7)
     i18n (0.8.1)
+    kramdown (1.16.2)
+    mdl (0.4.0)
+      kramdown (~> 1.12, >= 1.12.0)
+      mixlib-cli (~> 1.7, >= 1.7.0)
+      mixlib-config (~> 2.2, >= 2.2.1)
     minitest (5.10.2)
+    mixlib-cli (1.7.0)
+    mixlib-config (2.2.4)
     rspec (3.6.0)
       rspec-core (~> 3.6.0)
       rspec-expectations (~> 3.6.0)
@@ -48,6 +55,7 @@ DEPENDENCIES
   byebug
   factory_girl
   fuubar
+  mdl
   rspec
   rspec-given
 

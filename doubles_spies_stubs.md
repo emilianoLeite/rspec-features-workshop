@@ -2,11 +2,11 @@
 
 ## Double
 
-Substituir um objeto de *query*
+Substituir um objeto de _query_
 
 ## Spy
 
-Substituir um objeto de *command*
+Substituir um objeto de _command_
 
 ## Stub
 
